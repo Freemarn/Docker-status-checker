@@ -6,7 +6,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const startTime = Date.now();
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(__dirname)); 
 
 // Simple API the frontend polls to confirm the container is alive
 app.get('/api/status', (req, res) => {
